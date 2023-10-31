@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>bingo</title>
+	<link rel="stylesheet" type="text/css" href="game.css">
+</head>
+<body>
+	<div class="container">
+		
+		<table class="tbl">
+			<tr>
+				<td>
+					<input type="button" name="bingo" value="" onclick="touch1();press()" id="btn1">
+				</td>
+				<td>
+					<input type="button" name="bingo" value="" onclick="touch2();press()" id="btn2">
+				</td>
+				<td>
+					<input type="button" name="bingo" value="" onclick="touch3();press()" id="btn3">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" name="bingo" value="" onclick="touch4();press()" id="btn4">
+				</td>
+				<td>
+					<input type="button" name="bingo" value="" onclick="touch5();press()" id="btn5">
+				</td>
+				<td>
+					<input type="button" name="bingo" value="" onclick="touch6();press()" id="btn6">
+				</td>
+			</tr>
+			<tr>
+				<td>	
+					<input type="button" name="bingo" value="" onclick="touch7();press()" id="btn7">
+				</td>
+				<td>
+					<input type="button" name="bingo" value="" onclick="touch8();press()" id="btn8">
+				</td>
+				<td>
+					<input type="button" name="bingo" value="" onclick="touch9();press()" id="btn9">
+				</td>
+			</tr>
+
+		</table>
+
+
+	</div>
+		<center><h1  id="ans">WHO WIN MATCH</h1></center>
+		<center><button style="background-color: #11213a; color: #04baad; width: 150px; height: 30px; border-radius: 50px; margin-top: 10px;" onclick="rest()">RESTART</button> </center>
+		<!-- <center><h1  id="answ"></h1></center> -->
+
+	<script type="text/javascript">
+		// to print valu and disable button---------------------------------------------------------------------
+		var n=1;
+		function rest()
+		{
+			location.reload();
+	     a1 = a2 = a3 = a4 = a5 = a6 = a7 = a8 = a9 = '';
+	     // document.getElementsByName("bingo")[1].value = ""
+		}
+		function touch1()
+		{
+				if(n == 1)
+				{
+					document.getElementById('btn1').value = "x";
+					document.getElementById("btn1").disabled = true;
+					n=0;
+				}
+				else
+				{
+					document.getElementById('btn1').value = "o";
+					document.getElementById("btn1").disabled = true;
+					n=1
+				}
+		}
+		function touch2()
+		{
+				if(n == 1)
+				{
+					document.getElementById('btn2').value = "x";
+					document.getElementById("btn2").disabled = true;
+					n=0;
+				}
+				else
+				{
+					document.getElementById('btn2').value = "o";
+					document.getElementById("btn2").disabled = true;
+					n=1
+				}
+		}
+		function touch3()
+		{
+				if(n == 1)
+				{
+					document.getElementById('btn3').value = "x";
+					document.getElementById("btn3").disabled = true;
+					n=0;
+				}
+				else
+				{
+					document.getElementById('btn3').value = "o";
+					document.getElementById("btn3").disabled = true;
+					n=1
+				}
+		}
+		function touch4()
+		{
+				if(n == 1)
+				{
+					document.getElementById('btn4').value = "x";
+					document.getElementById("btn4").disabled = true;
+					n=0;
+				}
+				else
+				{
+					document.getElementById('btn4').value = "o";
+					document.getElementById("btn4").disabled = true;
+					n=1
+				}
+		}
+		function touch5()
+		{
+				if(n == 1)
+				{
+					document.getElementById('btn5').value = "x";
+					document.getElementById("btn5").disabled = true;
+					n=0;
+				}
+				else
+				{
+					document.getElementById('btn5').value = "o";
+					document.getElementById("btn5").disabled = true;
+					n=1
+				}
+		}
+		function touch6()
+		{
+				if(n == 1)
+				{
+					document.getElementById('btn6').value = "x";
+					document.getElementById("btn6").disabled = true;
+					n=0;
+				}
+				else
+				{
+					document.getElementById('btn6').value = "o";
+					document.getElementById("btn6").disabled = true;
+					n=1
+				}
+		}
+		function touch7()
+		{
+				if(n == 1)
+				{
+					document.getElementById('btn7').value = "x";
+					document.getElementById("btn7").disabled = true;
+					n=0;
+				}
+				else
+				{
+					document.getElementById('btn7').value = "o";
+					document.getElementById("btn7").disabled = true;
+					n=1
+				}
+		}
+		function touch8()
+		{
+				if(n == 1)
+				{
+					document.getElementById('btn8').value = "x";
+					document.getElementById("btn8").disabled = true;
+					n=0;
+				}
+				else
+				{
+					document.getElementById('btn8').value = "o";
+					document.getElementById("btn8").disabled = true;
+					n=1
+				}
+		}
+		function touch9()
+		{
+				if(n == 1)
+				{
+					document.getElementById('btn9').value = "x";
+					document.getElementById("btn9").disabled = true;
+					n=0;
+				}
+				else
+				{
+					document.getElementById('btn9').value = "o";
+					document.getElementById("btn9").disabled = true;
+					n=1
+				}
+		}
+		// to print valu and disable button----------------------------------------------------------------------
+
+			function press()
+			{
+
+				var a1,a2,a3,a4,a5,a6,a7,a8,a9;
+				a1= document.getElementById('btn1').value
+				a2= document.getElementById('btn2').value
+				a3= document.getElementById('btn3').value
+				a4= document.getElementById('btn4').value
+				a5= document.getElementById('btn5').value
+				a6= document.getElementById('btn6').value
+				a7= document.getElementById('btn7').value
+				a8= document.getElementById('btn8').value
+				a9= document.getElementById('btn9').value
+
+				var b1,b2,b3,b4,b5,b6,b7,b8,b9;
+
+				b1= document.getElementById('btn1')
+				b2= document.getElementById('btn2')
+				b3= document.getElementById('btn3')
+				b4= document.getElementById('btn4')
+				b5= document.getElementById('btn5')
+				b6= document.getElementById('btn6')
+				b7= document.getElementById('btn7')
+				b8= document.getElementById('btn8')
+				b9= document.getElementById('btn9')
+
+				if(a1 == "x" && a2 == "x" && a3 == "x")
+				{
+					document.getElementById("ans").innerText = "X IS WIN";
+					// document.getElementById("answ").innerHTML = "<img src='2.gif'>";
+
+						b4.disabled = true;
+						b5.disabled = true;
+						b6.disabled = true;
+						b7.disabled = true;
+						b8.disabled = true;
+						b9.disabled = true;
+
+						b1.style.color = "red"
+						b2.style.color = "red"
+						b3.style.color = "red"
+				}
+				else if(a4 == "x" && a5 == "x" && a6 == "x")
+				{
+					document.getElementById("ans").innerText = "X IS WIN"
+						b1.disabled = true;
+						b2.disabled = true;
+						b3.disabled = true;
+						b7.disabled = true;
+						b8.disabled = true;
+						b9.disabled = true;
+						b4.style.color = "red"
+						b5.style.color = "red"
+						b6.style.color = "red"
+
+				}
+				else if(a7 == "x" && a8 == "x" && a9 == "x")
+				{
+					document.getElementById("ans").innerText = "X IS WIN"
+						b1.disabled = true;
+						b2.disabled = true;
+						b3.disabled = true;
+						b4.disabled = true;
+						b5.disabled = true;
+						b6.disabled = true;
+
+						b7.style.color = "red"
+						b8.style.color = "red"
+						b9.style.color = "red"
+					
+				}
+				else if(a1 == "x" && a4 == "x" && a7 == "x")
+				{
+					document.getElementById("ans").innerText = "X IS WIN"
+						btn3.disabled = true;
+						btn2.disabled = true;
+						btn5.disabled = true;
+						btn6.disabled = true;
+						btn9.disabled = true;
+						btn8.disabled = true;
+						b1.style.color = "red"
+						b4.style.color = "red"
+						b7.style.color = "red"
+
+				}
+				else if(a2 == "x" && a5 == "x" && a8 == "x")
+				{
+					document.getElementById("ans").innerText = "X IS WIN"
+						btn1.disabled = true;
+						btn3.disabled = true;
+						btn4.disabled = true;
+						btn6.disabled = true;
+						btn7.disabled = true;
+						btn9.disabled = true;
+
+						b2.style.color = "red"
+						b5.style.color = "red"
+						b8.style.color = "red"
+
+					
+				}
+				else if(a3 == "x" && a6 == "x" && a9 == "x")
+				{
+					document.getElementById("ans").innerText = "X IS WIN"
+					    btn5.disabled = true;
+						btn1.disabled = true;
+						btn4.disabled = true;
+						btn2.disabled = true;
+						btn7.disabled = true;
+						btn8.disabled = true;
+						b6.style.color = "red"
+						b9.style.color = "red"
+						b3.style.color = "red"
+
+				}
+				else if(a1 == "x" && a5 == "x" && a9 == "x")
+				{
+					document.getElementById("ans").innerText = "X IS WIN"
+						btn2.disabled = true;
+						btn3.disabled = true;
+						btn4.disabled = true;
+						btn6.disabled = true;
+						btn7.disabled = true;
+						btn8.disabled = true;
+						b1.style.color = "red"
+						b5.style.color = "red"
+						b9.style.color = "red"
+				}
+					
+				
+				else if(a3 == "x" && a5 == "x" && a7 == "x")
+				{
+					document.getElementById("ans").innerText = "X IS WIN"
+
+						btn2.disabled = true;
+						btn1.disabled = true;
+						btn4.disabled = true;
+						btn6.disabled = true;
+						btn8.disabled = true;
+						btn9.disabled = true;
+
+						b3.style.color = "red"
+						b5.style.color = "red"
+						b7.style.color = "red"
+					
+				}
+
+				//----------------------ooo--------------6----------------
+				
+				else if(a1 == "o" && a2 == "o" && a3 == "o")
+				{
+					document.getElementById("ans").innerText = "O IS WIN"
+
+						btn4.disabled = true;
+						btn5.disabled = true;
+						btn6.disabled = true;
+						btn7.disabled = true;
+						btn8.disabled = true;
+						btn9.disabled = true;
+
+						b1.style.color = "blue"
+						b2.style.color = "blue"
+						b3.style.color = "blue"
+
+				}else if(a4 == "o" && a5 == "o" && a6 == "o")
+				{
+					document.getElementById("ans").innerText = "O IS WIN"
+					btn1.disabled = true;
+						btn2.disabled = true;
+						btn3.disabled = true;
+						btn7.disabled = true;
+						btn8.disabled = true;
+						btn9.disabled = true;
+
+						b4.style.color = "blue"
+						b5.style.color = "blue"
+						b6.style.color = "blue"
+
+				}
+				else if(a7 == "o" && a8 == "o" && a9 == "o")
+				{
+					document.getElementById("ans").innerText = "O IS WIN"
+							btn1.disabled = true;
+						btn2.disabled = true;
+						btn3.disabled = true;
+						btn4.disabled = true;
+						btn5.disabled = true;
+						btn6.disabled = true;
+
+						b7.style.color = "blue"
+						b8.style.color = "blue"
+						b9.style.color = "blue"
+					
+					
+				}
+				else if(a1 == "o" && a4 == "o" && a7 == "o")
+				{
+					document.getElementById("ans").innerText = "O IS WIN"
+						btn3.disabled = true;
+						btn2.disabled = true;
+						btn5.disabled = true;
+						btn6.disabled = true;
+						btn9.disabled = true;
+						btn8.disabled = true;
+
+						b1.style.color = "blue"
+						b4.style.color = "blue"
+						b7.style.color = "blue"
+
+
+				}
+				else if(a2 == "o" && a5 == "o" && a8 == "o")
+				{
+					document.getElementById("ans").innerText = "O IS WIN"
+
+					btn1.disabled = true;
+						btn3.disabled = true;
+						btn4.disabled = true;
+						btn6.disabled = true;
+						btn7.disabled = true;
+						btn9.disabled = true;
+
+						b5.style.color = "blue"
+						b2.style.color = "blue"
+						b8.style.color = "blue"
+					
+				}
+				else if(a3 == "o" && a6 == "o" && a9 == "o")
+				{
+					document.getElementById("ans").innerText = "O IS WIN"
+
+					btn5.disabled = true;
+						btn1.disabled = true;
+						btn4.disabled = true;
+						btn2.disabled = true;
+						btn7.disabled = true;
+						btn8.disabled = true;
+
+						b6.style.color = "blue"
+						b9.style.color = "blue"
+						b3.style.color = "blue"
+
+				}
+				else if(a1 == "o" && a5 == "o" && a9 == "o")
+				{
+					document.getElementById("ans").innerText = "O IS WIN"
+							btn2.disabled = true;
+						btn3.disabled = true;
+						btn4.disabled = true;
+						btn6.disabled = true;
+						btn7.disabled = true;
+						btn8.disabled = true;
+
+						b1.style.color = "blue"
+						b5.style.color = "blue"
+						b9.style.color = "blue"
+					
+				}
+				else if(a3 == "o" && a5 == "o" && a7 == "o")
+				{
+					document.getElementById("ans").innerText = "O IS WIN";
+					btn2.disabled = true;
+						btn1.disabled = true;
+						btn4.disabled = true;
+						btn6.disabled = true;
+						btn8.disabled = true;
+						btn9.disabled = true;
+
+						b5.style.color = "blue"
+						b7.style.color = "blue"
+						b3.style.color = "blue"
+					
+				}
+				//-----------------tie---------------------------------------------
+				else if((a1 == "x" || a1 == "o") && (a2 == "x" || a2 == "o") && (a3 == "x" || a3 == "o") && (a4 == "x" || a4 == "o") && (a5 == "x" || a5 == "o") && (a6 == "x" || a6 == "o") && (a7 == "x" || a7 == "o") && (a8 == "x" || a8 == "o") && (a9 == "x" || a9 == "o"))
+				{
+					document.getElementById("ans").innerText = "MATCH IS TIE"
+
+					    b2.style.color = "yellow";
+						b1.style.color = "yellow";
+						b4.style.color = "yellow";
+						b6.style.color = "yellow";
+						b8.style.color = "yellow";
+						b9.style.color = "yellow";
+
+						b5.style.color = "yellow"
+						b7.style.color = "yellow"
+						b3.style.color = "yellow"
+
+				}
+			}
+	</script>
+
+</body>
